@@ -21,7 +21,7 @@ import com.example.pokedex.designsystem.theme.values.PurplePoison
 import com.example.pokedex.designsystem.theme.values.YellowElectric
 import com.example.pokedex.designsystem.theme.values.YellowRock
 
-data class PokedexColors(
+data class PokedexColor(
     val grayTypes: Color = GrayTypes,
     val grayNormal: Color = GrayNormal,
     val grayNocturn: Color = GrayNocturn,
