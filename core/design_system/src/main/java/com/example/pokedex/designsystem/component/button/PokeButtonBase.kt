@@ -43,7 +43,7 @@ fun PokeButtonBase(
             containerColor = colorClicked,
             contentColor = colorTextClicked
         ),
-        border = BorderStroke(sizes.buttonBorderStroke, buttonColor),
+        border = BorderStroke(sizes.buttonBorderStrokeSize, buttonColor),
         interactionSource = interactionSource,
         content = content
     )
@@ -64,7 +64,7 @@ private fun PokeButtonBasePreview() {
             PokeButtonBase(
                 buttonColor = colors.orangeFire,
                 textColor= colors.grayTypes,
-                content = { Text(text = "Button", style = typographys.normal) },
+                content = { Text(text = "Button", style = typographys.semiBoldlNormal) },
             ) {
 
             }

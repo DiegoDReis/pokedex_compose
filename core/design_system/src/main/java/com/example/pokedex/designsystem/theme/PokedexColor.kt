@@ -4,6 +4,7 @@ import androidx.compose.ui.graphics.Color
 import com.example.pokedex.designsystem.theme.values.BlueDragon
 import com.example.pokedex.designsystem.theme.values.BlueFly
 import com.example.pokedex.designsystem.theme.values.BlueGhost
+import com.example.pokedex.designsystem.theme.values.BlueNav
 import com.example.pokedex.designsystem.theme.values.BlueWater
 import com.example.pokedex.designsystem.theme.values.GrayNocturn
 import com.example.pokedex.designsystem.theme.values.GrayNormal
@@ -30,6 +31,7 @@ data class PokedexColor(
     val blueDragon: Color = BlueDragon,
     val blueGhost: Color = BlueGhost,
     val blueFly: Color = BlueFly,
+    val blueNav: Color = BlueNav,
 
     val yellowElectric: Color = YellowElectric,
     val yellowRock: Color = YellowRock,

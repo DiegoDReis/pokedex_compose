@@ -38,7 +38,7 @@ fun PokeArrowButton(
                 Text(
                     modifier = Modifier.align(Alignment.Center),
                     text = text,
-                    style = PokedexTheme.typographys.normal
+                    style = PokedexTheme.typographys.semiBoldlNormal
                 )
                 iconIdRes?.let {
                     Icon(

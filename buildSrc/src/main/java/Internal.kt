@@ -10,4 +10,5 @@ object Internal {
     const val androidxUiToolingPreview = "androidx.compose.ui:ui-tooling-preview"
     const val androidxMaterial3 = "androidx.compose.material3:material3"
     const val androidxUiTestManifest = "androidx.compose.ui:ui-test-manifest"
+    const val androidxNavigationCompose= "androidx.navigation:navigation-compose:${Version.navigationCompose}"
 }

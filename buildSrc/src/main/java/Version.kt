@@ -1,5 +1,6 @@
 object Version {
 
+    const val navigationCompose = "2.8.4"
     const val kotlin = "1.9.0"
     const val coreKtx = "1.13.1"
     const val junit = "4.13.2"

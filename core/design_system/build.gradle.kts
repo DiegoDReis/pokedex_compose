@@ -22,6 +22,7 @@ dependencies {
     api(Internal.androidxUiGraphics)
     api(Internal.androidxUiToolingPreview)
     api(Internal.androidxMaterial3)
+    api(Internal.androidxNavigationCompose)
 
     debugImplementation(Internal.androidxUiTooling)
     debugImplementation(Internal.androidxUiTestManifest)

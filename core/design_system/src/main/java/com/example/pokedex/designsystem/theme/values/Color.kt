@@ -10,6 +10,7 @@ internal val BlueWater = Color(0xFF5090D6)
 internal val BlueDragon = Color(0xFF0B6DC3)
 internal val BlueGhost = Color(0xFF5269AD)
 internal val BlueFly = Color(0xFF89AAE3)
+internal val BlueNav = Color(0xFF173EA5)
 
 internal val YellowElectric = Color(0xFFF4D23C)
 internal val YellowRock = Color(0xFFC5B78C)
