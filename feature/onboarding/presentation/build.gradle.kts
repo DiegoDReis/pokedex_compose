@@ -2,30 +2,12 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
 }
-
 apply {
     from("$rootDir/plugins/android-commons.gradle")
-    from("$rootDir/plugins/feature-dependencies.gradle")
 }
 
 android {
-    namespace = "com.example.pokedex"
-
-    defaultConfig {
-        applicationId = "com.example.pokedex"
-        versionCode = 1
-        versionName = "1.0"
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
+    namespace = "com.example.pokedex.feature.onboarding.presentation"
 }
 
 dependencies {

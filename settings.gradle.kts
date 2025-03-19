@@ -22,3 +22,5 @@ dependencyResolutionManagement {
 rootProject.name = "pokedex compose"
 include(":app")
 include("core:design_system")
+include(":feature:onboarding:presentation")
+include(":feature:onboarding:domain")
