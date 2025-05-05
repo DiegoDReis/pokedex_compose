@@ -23,4 +23,6 @@ internal val TagVerticalPaddingSize = 2.dp
 
 internal val SmallFontSize = 12.sp
 internal val NormalFontSize = 14.sp
+internal val MediumFontSize = 20.sp
+internal val LagerFontSize = 26.sp
 

@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
 }
 apply {
@@ -7,7 +7,7 @@ apply {
 }
 
 android {
-    namespace = "com.example.pokedex.feature.onboarding.presentation"
+    namespace = "com.example.pokedex.onboarding"
 }
 
 dependencies {
