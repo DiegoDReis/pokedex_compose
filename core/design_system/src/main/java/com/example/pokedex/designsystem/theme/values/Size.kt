@@ -12,10 +12,11 @@ internal val MediumXSize = 20.dp
 internal val MediumXXSize = 24.dp
 internal val LargeSize = 28.dp
 internal val LargeXSize = 32.dp
-internal val LargeXXSize = 36.dp
+internal val LargeXXSize = 40.dp
 
 
 internal val ButtonBorderStrokeSize = 2.dp
+internal val ButtonTallSize = 50.dp
 
 internal val TagBorderStrokeSize = 67.dp
 internal val TagHorizontalPaddingSize = 6.dp
@@ -26,3 +27,5 @@ internal val NormalFontSize = 14.sp
 internal val MediumFontSize = 20.sp
 internal val LagerFontSize = 26.sp
 
+internal val IndicatorSize = 9.dp
+internal val IndicatorWidth = 28.dp

@@ -2,6 +2,9 @@ package com.example.pokedex.designsystem.theme
 
 import androidx.compose.ui.unit.Dp
 import com.example.pokedex.designsystem.theme.values.ButtonBorderStrokeSize
+import com.example.pokedex.designsystem.theme.values.ButtonTallSize
+import com.example.pokedex.designsystem.theme.values.IndicatorSize
+import com.example.pokedex.designsystem.theme.values.IndicatorWidth
 import com.example.pokedex.designsystem.theme.values.LargeSize
 import com.example.pokedex.designsystem.theme.values.LargeXSize
 import com.example.pokedex.designsystem.theme.values.LargeXXSize
@@ -30,5 +33,8 @@ data class PokedexSize (
     val mediumXXSize: Dp = MediumXXSize,
     val largeSize: Dp = LargeSize,
     val largeXSize: Dp = LargeXSize,
-    val largeXXSize: Dp = LargeXXSize
+    val largeXXSize: Dp = LargeXXSize,
+    val buttonTallSize: Dp = ButtonTallSize,
+    val indicatorSize: Dp = IndicatorSize,
+    val indicatorWidth: Dp = IndicatorWidth,
 )

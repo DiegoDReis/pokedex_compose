@@ -9,22 +9,25 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.foundation.relocation.bringIntoViewRequester
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
+import com.example.pokedex.designsystem.component.button.PokeArrowButton
+import com.example.pokedex.designsystem.component.button.PokeButtonBase
+import com.example.pokedex.designsystem.component.indicator.PokeIndicator
 import com.example.pokedex.designsystem.theme.PokedexTheme
+import com.example.pokedex.designsystem.theme.PokedexTheme.colors
 import com.example.pokedex.designsystem.theme.PokedexTheme.sizes
 import com.example.pokedex.designsystem.theme.PokedexTheme.typographys
-import com.example.pokedex.designsystem.theme.PokedexTypography
 import com.example.pokedex.onboarding.R
 
 data class OnboardingPagerData(
@@ -41,7 +44,7 @@ val onboardingPagerData = listOf(
         subtitleRes = R.string.onboarding_text_subtitle1
     ),
     OnboardingPagerData(
-        imageRes = R.drawable.img_onboarding,
+        imageRes = R.drawable.img_onboarding2,
         titleRes = R.string.onboarding_text_title2,
         subtitleRes = R.string.onboarding_text_subtitle2
     )
@@ -51,8 +54,16 @@ val onboardingPagerData = listOf(
 @Composable
 fun OnboardingScreen() {
     val pagerState = rememberPagerState(pageCount = { 2 })
-    Column(modifier = Modifier.fillMaxSize()) {
-        HorizontalPager(state = pagerState, modifier = Modifier.fillMaxSize()) { state ->
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Top
+    ) {
+        HorizontalPager(
+            state = pagerState, modifier = Modifier
+                .fillMaxSize()
+                .weight(1F)
+        ) { state ->
             OnboardingContentPage(
                 modifier = Modifier.fillMaxSize(),
                 imageRes = onboardingPagerData[state].imageRes,
@@ -60,6 +71,22 @@ fun OnboardingScreen() {
                 subtitleRes = onboardingPagerData[state].subtitleRes
             )
         }
+        Spacer(Modifier.height(sizes.mediumXXSize))
+        PokeIndicator(
+            modifier = Modifier
+                .wrapContentSize(),
+            pagerState = pagerState
+        )
+        Spacer(Modifier.height(sizes.mediumXXSize))
+        PokeArrowButton(
+            modifier = Modifier
+                .height(sizes.buttonTallSize)
+                .padding(horizontal = sizes.mediumXSize),
+            buttonColor = colors.blueNav,
+            textColor = Color.White,
+            text = "Continuar"
+        ) { }
+        Spacer(Modifier.height(sizes.largeXXSize))
     }
 }
 
@@ -74,18 +101,18 @@ private fun OnboardingContentPage(
     Column(
         modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        verticalArrangement = Arrangement.Bottom
     ) {
         Image(painter = painterResource(id = imageRes), contentDescription = null)
         Spacer(modifier = Modifier.height(sizes.largeXXSize))
         Text(
-            modifier = Modifier.padding(sizes.mediumXSize),
+            modifier = Modifier.padding(horizontal = sizes.mediumXSize),
             text = stringResource(id = titleRes),
             style = typographys.mediumLarge
         )
         Spacer(modifier = Modifier.height(sizes.mediumSize))
         Text(
-            modifier = Modifier.padding(sizes.mediumXSize),
+            modifier = Modifier.padding(horizontal = sizes.mediumXSize),
             text = stringResource(id = subtitleRes),
             style = typographys.regularNormal
         )
