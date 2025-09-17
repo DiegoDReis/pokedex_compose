@@ -24,8 +24,12 @@ internal val TagVerticalPaddingSize = 2.dp
 
 internal val SmallFontSize = 12.sp
 internal val NormalFontSize = 14.sp
-internal val MediumFontSize = 20.sp
+internal val MediumFontSize = 16.sp
 internal val LagerFontSize = 26.sp
+internal val XLagerFontSize = 32.sp
 
 internal val IndicatorSize = 9.dp
 internal val IndicatorWidth = 28.dp
+
+internal val PokemonForegroundSize = 308.dp
+internal val PokemonImageSize = 225.dp

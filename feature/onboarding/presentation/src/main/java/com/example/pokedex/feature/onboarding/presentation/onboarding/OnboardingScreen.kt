@@ -1,4 +1,4 @@
-package com.example.pokedex.feature.onboarding.presentation
+package com.example.pokedex.feature.onboarding.presentation.onboarding
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
-import androidx.compose.foundation.relocation.bringIntoViewRequester
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -22,9 +21,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.pokedex.designsystem.component.button.PokeArrowButton
-import com.example.pokedex.designsystem.component.button.PokeButtonBase
 import com.example.pokedex.designsystem.component.indicator.PokeIndicator
-import com.example.pokedex.designsystem.theme.PokedexTheme
 import com.example.pokedex.designsystem.theme.PokedexTheme.colors
 import com.example.pokedex.designsystem.theme.PokedexTheme.sizes
 import com.example.pokedex.designsystem.theme.PokedexTheme.typographys

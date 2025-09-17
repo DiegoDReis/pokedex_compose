@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.pokedex.designsystem.R
 import com.example.pokedex.designsystem.theme.PokedexTheme
@@ -25,6 +26,7 @@ fun PokeTagText(
     modifier: Modifier = Modifier,
     backGroundColor: Color,
     @DrawableRes iconResId: Int,
+    iconSize: Dp? = null,
     textColor: Color,
     text: String
 ) {
@@ -32,6 +34,7 @@ fun PokeTagText(
         modifier = modifier,
         backGroundColor = backGroundColor,
         iconResId = iconResId,
+        iconSize = iconSize,
         iconModifier = Modifier.padding(
             horizontal = sizes.tagHorizontalPaddingSize,
             vertical = sizes.tagVerticalPaddingSize

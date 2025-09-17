@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.pokedex.designsystem.R
 import com.example.pokedex.designsystem.theme.PokedexTheme
@@ -26,6 +27,7 @@ fun PokeTag(
     modifier: Modifier = Modifier,
     backGroundColor: Color,
     @DrawableRes iconResId: Int,
+    iconSize: Dp? = null,
     iconModifier: Modifier = Modifier,
     content: @Composable RowScope.() -> Unit = {}
 ) {
@@ -38,7 +40,7 @@ fun PokeTag(
         verticalAlignment = Alignment.CenterVertically
     ) {
         Image(
-            modifier = iconModifier,
+            modifier = iconModifier.size(iconSize ?: sizes.mediumSize ),
             painter = painterResource(id = iconResId),
             contentDescription = null
         )
